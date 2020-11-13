@@ -18,9 +18,6 @@ class GameEngine:
         self.red_player = Player("red")
         return
 
-    def start_game(self):
-        print(self.display_message)
-
     def play_move(self, move, id):
         if id == "red":
             self.red_player.move = move
