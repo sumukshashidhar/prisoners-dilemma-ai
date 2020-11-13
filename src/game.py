@@ -2,6 +2,14 @@ class Player:
     def __init__(self, idx):
         self.color = idx
         self.move = None
+        return
+
+    def set_move(self, move):
+        self.move = move
+        return
+
+    def get_move(self):
+        return self.move
 
 
 class GameEngine:
@@ -14,7 +22,10 @@ class GameEngine:
         print(self.display_message)
 
     def play_move(self, move, id):
-
+        if id == "red":
+            self.red_player.move = move
+        else:
+            self.blue_player.move = move
 
     def determine_outcome(self):
         move1 = self.blue_player.move
